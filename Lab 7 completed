@@ -1,0 +1,73 @@
+# TODO: sorted_cities is given a string of city names separated by commas
+# and prints out the names in sorted order. It returns None
+#def sorted_cities(city_names):
+#    pass
+
+
+# Debugging function calls. You can add more or change
+# The following should print Boston, Chicago Indianapolis
+# and San Francisco in that order each city on a new line
+sorted_cities = ("San Francisco","Boston","Chicago","Indianapolis")
+
+alphabeticalList = sorted(sorted_cities)
+print(alphabeticalList)
+
+#########################################################################################################
+
+
+
+def is_permutation():
+    list1 = ["1", "3", "5", "8"]
+    list2 = ["1", "3", "5", "8"]
+    list1.sort()
+    list2.sort()
+    if list1 == list2:
+        print("Lists are the same")
+        pass
+    else:
+        print("Lists are not matching!")
+
+is_permutation()
+
+#########################################################################################################
+
+
+
+def ticTacToe():
+    Row = input("What row will you put your marker?:")
+    Line = input("What line will you put your marker?:")
+    if Row == 1:
+        print("here")
+        if Line == 1:
+            x = input("First player put either X or O:")
+        elif Line == 2:
+            x1 = input("Second player put either X or O:")
+        elif Line == 3:
+            x2 = input("First player put either X or O:")
+        else:
+            print("Please input for row and line either 1, 2, or 3")
+    elif Row == 2:
+        if Line == 1:
+            x_1 = input("First player put either X or O:")
+        elif Line == 2:
+            x1_1 = input("Second player put either X or O:")
+        elif Line == 3:
+            x2_1 = input("First player put either X or O:")
+        else:
+            print("Please input for row and line either 1, 2, or 3")
+    elif Row == 3:
+        if Line == 1:
+            x_2 = input("First player put either X or O:")
+        elif Line == 2:
+            x1_2 = input("Second player put either X or O:")
+        elif Line == 3:
+            x2_2 = input("First player put either X or O:")
+        else:
+            print("Please input for row and line either 1, 2, or 3")
+    print(x, x1, x2)
+    print(x_1, x1_1, x1_2)
+    print(x_2, x1_2, x2_2)
+
+
+
+ticTacToe()
