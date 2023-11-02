@@ -1,0 +1,128 @@
+num1 = 10
+    while num1 > 3:
+        print(num1)
+        num1 = num1 - 1
+
+#Output would be a print statement with num1
+#then decreasing num1 by 1 each time the loop is ran
+
+num2 = 10
+    while True:
+        if num2 < 7:
+            # break makes us quit the loop
+            break
+        print(num2)
+        num2 = num2 - 1
+
+#Output would be num2 being printed and decreasing by 1 each time the loop
+#is repeated, it would run until it reachs num2 = 7 then it would break
+
+divisor = 2
+    for i in range(0, 10, 2):
+        print(i / divisor)
+
+#Output would be i increasing by 1 each time the loop in run, this is
+#because the range is set between 0 to 10 and will only generate numbers
+#that are multiples of 2, then these multiples are divided printing out a
+#sequence like 1, 2, 3, 4
+
+my_string = 'stressed'
+    for letter in my_string:
+        print(letter)
+
+#Output would be each letter in my_string
+
+
+my_string = 'stressed'
+    res = ''
+    for letter in my_string:
+        res = letter + res
+    print(res)
+
+#Output would be the output of my_string just reversed
+'''
+###############################################################################
+'''
+base = ' '
+exp = ' '
+
+def exponential(base, exp):
+    base = int(input("Input a base:"))
+    exp = int(input("Input an exponent:"))
+    results = 1
+    for _ in range(abs(exp)):
+        results *= base
+    if exp < 0:
+        results = 1 / results
+    print(results)
+    return results
+
+exponential(base, exp)
+
+###########################################################################
+#PART A
+def list_of_positive_indices(in_list):
+    return [i for i, n in enumerate(in_list) if n > 0]
+    pass
+
+result = list_of_positive_indices([1, -1, 0, 3])
+print(result)
+
+
+
+###########################################################################
+#PART B
+def is_even(num):
+    return num % 2 == 0
+
+positive = is_even(6 % 3)
+print(positive)
+
+###########################################################################
+#PART C
+def is_even(num):
+    if num % 2 == 0:
+        return "Positive"
+    else:
+        return "Negative"
+
+
+positive = is_even(7 % 3)
+print(positive)
+
+##########################################################################
+
+name = 'Harry Potter'
+greeting = 'Hello, world!'
+goodbye = 'Goodbye, all!'
+space = ' '
+star = '*'
+
+
+print(star * 24)
+print(star, space * 20, star)
+print(star, space, greeting[:6], name[:5], greeting[12:]*3, space, star)
+print(star, space * 20, star)
+print(star * 24)
+
+
+print(star * 28)
+print(star, space * 24, star)
+print(star, space, goodbye[:8], name[5:],  greeting[12:]*3, space, star)
+print(star, space * 24, star)
+print(star * 28)
+
+
+
+#########################################################################
+
+#The second version of the code in PS3 is longer in its print statements
+#when compared to PS0 but it takes a lot fewer prints statements in PS3
+#to print out what is desired
+
+#########################################################################
+
+phrase = input("Enter a phrase:").title()
+
+acronym = next(zip(*phrase.split()))
+print('Your acronym is ', acronym)
